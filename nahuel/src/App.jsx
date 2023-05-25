@@ -2,8 +2,8 @@ import './App.css';
 
 const App = () => {
   return (
-    <div className="App">
-      <h1>Hola React</h1>
+    <div>
+      <h1>Hola React !</h1>
     </div>
   );
 };
