@@ -1,0 +1,22 @@
+.container-fluid{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(70, 70, 70, .8);
+    position: sticky;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vh;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    text-decoration: none;
+    color: white;
+}
