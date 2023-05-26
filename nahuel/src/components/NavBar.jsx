@@ -1,28 +1,29 @@
 import React from 'react'
-import Cart from './Cart'
 import './NavBar.css'
-import samsung from '../assets/samsung-icon-white.png';
 
 function NavBar() {
     return (
-        <div className='container-fluid'>
-            <a className="navbar-brand" href="#">
-                <img width={110} src={samsung} alt="Samsung Icon" />
-            </a>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
-                <a className="nav-link" aria-current="page" href="#">
-                    Celulares
+        <div className='container-fluid d-flex justify-content-center sticky-top'>
+            <nav className="navbar">
+                <a className="navbar-brand" href="#">
+                    <img width={30} src='https://upload.wikimedia.org/wikipedia/commons/f/f6/Samsung_icon.svg' alt="Samsung Icon" />
                 </a>
-                <a className="nav-link" aria-current="page" href="#">
-                    Notebooks
+                <a className="nav-link text-light" aria-current="page" href="#">
+                    Serie S
                 </a>
-                <a className="nav-link" aria-current="page" href="#">
+                <a className="nav-link text-light" aria-current="page" href="#">
+                    Serie A
+                </a>
+                <a className="nav-link text-light" aria-current="page" href="#">
+                    Accesorios
+                </a>
+                <a className="nav-link text-light" aria-current="page" href="#">
                     Soporte
                 </a>
+                <a className='nav-link' aria-current='page' href='#'>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Antu_amarok_cart_add.svg" alt="Cart Icon White" width={30} />
+                </a>
             </nav>
-            <a className='nav-link' aria-current='page' href='#'>
-                <Cart />
-            </a>
         </div>
     )
 }

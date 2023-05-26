@@ -1,0 +1,14 @@
+.contenedor-home{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-imagen-destacada{
+    width: 60%;
+}
+
+.imagen-destacada{
+    width: 100%;
+}
