@@ -1,0 +1,10 @@
+.contenedor-botones{
+    display: flex;
+    justify-content: center;
+    gap: 5vh;
+}
+
+button{
+    width: 3vh;
+    height: 3vh;
+}

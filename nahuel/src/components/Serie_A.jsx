@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import Productos from './productos.js';
 import './Accesorios.css'
+import './Serie_A.css'
 
-function Accesorios({cantidadProductos}) {
+function Serie_A({ cantidadProductos }) {
   const [carrito, setCarrito] = useState([]);
 
-  const accesorios = Productos.filter(producto => producto.categoria === 'Accesorios');
+  const productosSerieS = Productos.filter(producto => producto.categoria === 'Serie A');
 
   const agregarProducto = (producto) => {
     setCarrito([...carrito, producto]);
@@ -22,10 +23,10 @@ function Accesorios({cantidadProductos}) {
 
   return (
     <div>
-      <h1>Accesorios</h1>
-      {accesorios.map(producto => (
+      <h1>Serie A</h1>
+      {productosSerieS.map(producto => (
         <div key={producto.idx}>
-          <img src={producto.imagen1} alt={producto.titulo} width={600} />
+          <img className='imagenes' src={producto.imagen1} alt={producto.titulo} />
           <h2>{producto.titulo}</h2>
           <p>{producto.descripcion}</p>
           <p>Precio: ${producto.precio}</p>
@@ -39,4 +40,4 @@ function Accesorios({cantidadProductos}) {
   );
 }
 
-export default Accesorios;
+export default Serie_A;
