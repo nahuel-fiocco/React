@@ -9,6 +9,7 @@ import NotFound from './components/NotFound.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Categoria from './components/Categoria';
 import Carrito from './components/Carrito';
+import Producto from './components/Producto';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
@@ -20,6 +21,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/category/:categoryId" element={<Categoria />} />
+        <Route path='/producto/:productId' element={<Producto/>} />
         <Route path="/Soporte" element={<Soporte />} />
         <Route path="/Carrito" element={<Carrito/>} />
         <Route path="*" element={<NotFound />} />
