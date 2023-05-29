@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes, useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import Productos from './productos.js';
 import './Categoria.css';
 
@@ -11,12 +11,14 @@ function Categoria() {
         <div>
             <h1>{categoryId}</h1>
             {productosCategoria.map(producto => (
-                <div key={producto.idx}>
-                    <img src={producto.imagen1} alt={producto.titulo} className='imagen' />
-                    <h2>{producto.titulo}</h2>
-                    <p>{producto.descripcion}</p>
-                    <p>Precio: ${producto.precio}</p>
-                </div>
+                <Link to={`/producto/${producto.idx}`} className='text-decoration-none'>
+                    <div key={producto.idx}>
+                        <img src={producto.imagen1} alt={producto.titulo} className='imagen' />
+                        <h2>{producto.titulo}</h2>
+                        <p>{producto.descripcion}</p>
+                        <p>Precio: ${producto.precio}</p>
+                    </div>
+                </Link>
             ))}
         </div>
     );

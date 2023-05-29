@@ -12,8 +12,10 @@ function Carrito() {
     //   </ul>
     // </div>
     <div>
-        <h1>Sitio en construccion, estamos trabajando para usted.</h1>
-        <img src="https://media.tenor.com/M-ibWYQzmiIAAAAC/cat-cute.gif" alt="Sitio en Construccion" className='imagen-carrito' />
+        <h1>Carrito</h1>
+      <h4>Tu carrito contiene...</h4>
+      <img src="https://media.tenor.com/M-ibWYQzmiIAAAAC/cat-cute.gif" alt="Sitio en Construccion" className='imagen-carrito' />
+      <h5>Sitio en construccion, estamos trabajando para usted.</h5>
     </div>
   );
 }

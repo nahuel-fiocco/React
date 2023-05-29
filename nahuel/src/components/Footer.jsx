@@ -5,7 +5,7 @@ import github from '../assets/github.svg'
 
 function Footer() {
   return (
-    <div className='container-fluid d-flex justify-content-center align-items-center footer-container'>
+    <div className='container-fluid footer-container'>
       <a className='link-repo text-decoration-none text-light' href="https://github.com/nahuel-fiocco/react" target='_blank'>
         <div className="d-flex align-items-center contenedor">
           <img src={github} alt="Github Icon" width={20} />
