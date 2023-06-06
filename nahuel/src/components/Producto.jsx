@@ -1,9 +1,9 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import Productos from './productos.js';
-import './Producto.css';
+import './ItemDetailContainer.css';
 
-function Producto() {
+function ItemDetailContainer() {
   const { productId } = useParams();
   const producto = Productos.find((p) => p.idx.toString() === productId);
 
@@ -25,4 +25,4 @@ function Producto() {
   );
 }
 
-export default Producto;
+export default ItemDetailContainer;

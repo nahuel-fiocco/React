@@ -1,9 +1,9 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Productos from './productos.js';
-import './Categoria.css';
+import './ItemList.css';
 
-function Categoria() {
+function ItemList() {
     const { categoryId } = useParams();
     const productosCategoria = Productos.filter(producto => producto.categoria.toLowerCase() === categoryId.toLowerCase());
 
@@ -24,4 +24,4 @@ function Categoria() {
     );
 }
 
-export default Categoria;
+export default ItemList;

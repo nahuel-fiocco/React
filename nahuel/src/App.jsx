@@ -3,11 +3,11 @@ import { createRoot } from 'react-dom/client';
 import './main.css';
 import NavBar from './components/NavBar.jsx';
 import Footer from './components/Footer.jsx';
-import Home from './components/Home.jsx';
+import ItemListContainer from './components/ItemListContainer.jsx';
 import Soporte from './components/Soporte.jsx';
 import NotFound from './components/NotFound.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Categoria from './components/Categoria';
+import ItemList from './components/ItemList';
 import Carrito from './components/Carrito';
 import Producto from './components/Producto';
 
@@ -19,8 +19,8 @@ root.render(
     <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/category/:categoryId" element={<Categoria />} />
+        <Route path="/" element={<ItemListContainer />} />
+        <Route path="/category/:categoryId" element={<ItemList />} />
         <Route path='/producto/:productId' element={<Producto/>} />
         <Route path="/Soporte" element={<Soporte />} />
         <Route path="/Carrito" element={<Carrito/>} />

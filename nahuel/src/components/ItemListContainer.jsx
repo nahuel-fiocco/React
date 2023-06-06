@@ -2,9 +2,9 @@ import React from 'react'
 import a54 from '../assets/a54.webp'
 import s23 from '../assets/s23-series.jpg'
 import buds from '../assets/buds.webp';
-import './Home.css'
+import './ItemListContainer.css'
 
-function Home() {
+function ItemListContainer() {
   return (
     <div className='contenedor-home'>
       <div className='contenedor-imagen-destacada'>
@@ -20,4 +20,4 @@ function Home() {
   )
 }
 
-export default Home;
+export default ItemListContainer;
