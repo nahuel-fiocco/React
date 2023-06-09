@@ -1,21 +1,23 @@
-import React from 'react'
-import a54 from '../assets/a54.webp'
-import s23 from '../assets/s23-series.jpg'
-import buds from '../assets/buds.webp';
+import React, { useEffect, useState } from 'react'
+import productos from './Productos.js'
 import './ItemListContainer.css'
+import ItemList from './ItemList.jsx'
+import { useParams } from 'react-router-dom'
 
 function ItemListContainer() {
+
+  const [productList, setProductList] = useState([])
+  const { categoryId } = useParams()
+
+  useEffect(() => {
+    const filteredProducts = categoryId
+      ? productos.filter((producto) => producto.categoria === categoryId) : productos;
+    setProductList(filteredProducts)
+  }, [categoryId])
+
   return (
     <div className='contenedor-home'>
-      <div className='contenedor-imagen-destacada'>
-        <img className='imagen-destacada' src={s23} alt="Galaxy S23" />
-      </div>
-      <div className='contenedor-imagen-destacada'>
-        <img className='imagen-destacada' src={a54} alt="Galaxy A54" />
-      </div>
-      <div className='contenedor-imagen-destacada'>
-        <img className='imagen-destacada' src={buds} alt="Galaxy Buds" />
-      </div>
+      <ItemList products={productList} />
     </div>
   )
 }

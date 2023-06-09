@@ -4,13 +4,13 @@ import { NavLink } from 'react-router-dom';
 // import Carrito from './Carrito';
 
 function NavBar() {
-//   const [carritoVisible, setCarritoVisible] = useState(false);
+  //   const [carritoVisible, setCarritoVisible] = useState(false);
 
-//   const toggleCarrito = () => {
-//     setCarritoVisible(!carritoVisible);
-//   };
+  //   const toggleCarrito = () => {
+  //     setCarritoVisible(!carritoVisible);
+  //   };
 
-// ACA LA IDEA ES QUE AL PULSAR EN EL ICONO DEL CARRITO SE ABRA UNA VENTANA CON EL CARRITO TIPO POPOVER, PERO NO ME SALE, SEGUIREMOS INTENTANDO JE
+  // ACA LA IDEA ES QUE AL PULSAR EN EL ICONO DEL CARRITO SE ABRA UNA VENTANA CON EL CARRITO TIPO POPOVER, PERO NO ME SALE, SEGUIREMOS INTENTANDO JE
 
   return (
     <div className='container-fluid d-flex justify-content-center sticky-top'>

@@ -1,27 +1,21 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import Productos from './productos.js';
+import { Link } from 'react-router-dom';
 import './ItemList.css';
 
-function ItemList() {
-    const { categoryId } = useParams();
-    const productosCategoria = Productos.filter(producto => producto.categoria.toLowerCase() === categoryId.toLowerCase());
-
-    return (
-        <div>
-            <h1>{categoryId}</h1>
-            {productosCategoria.map(producto => (
-                <Link to={`/producto/${producto.idx}`} className='text-decoration-none'>
-                    <div key={producto.idx}>
-                        <img src={producto.imagen1} alt={producto.titulo} className='imagen' />
-                        <h2>{producto.titulo}</h2>
-                        <p>{producto.descripcion}</p>
-                        <p>Precio: ${producto.precio}</p>
-                    </div>
-                </Link>
-            ))}
-        </div>
-    );
+function ItemList({ products }) {
+  return (
+    <div>
+      <div className="card-container">
+        {products.map((product) => (
+          <Link to={`/producto/${product.idx}`} key={product.idx} className="card">
+            <img src={product.imagen1} alt={product.titulo} />
+            <h4>{product.titulo}</h4>
+            <p>Precio: ${product.precio}</p>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default ItemList;
