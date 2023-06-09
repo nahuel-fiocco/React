@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 101vh;
+    justify-content: center;
 }
 
 .contenedor-imagen-destacada{
@@ -11,4 +13,12 @@
 
 .imagen-destacada{
     width: 100%;
+}
+
+.spinner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4vh;
+    color: #808080;
 }
