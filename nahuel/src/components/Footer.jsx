@@ -1,6 +1,6 @@
 import React from 'react'
 import './Footer.css'
-import github from '../assets/github.svg'
+import github from 'https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg'
 
 
 function Footer() {
