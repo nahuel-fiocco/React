@@ -1,4 +1,5 @@
 import React from 'react'
+import './Soporte.css'
 
 function Soporte() {
   return (
