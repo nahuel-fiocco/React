@@ -2,3 +2,7 @@
     display: flex;
     align-items: center;
 }
+
+.container-detail{
+    min-height: 101vh;
+}

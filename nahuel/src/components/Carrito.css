@@ -1,3 +1,7 @@
 .imagen-carrito {
     padding: 50px;
 }
+
+.container-carrito{
+    min-height: 101vh;
+}

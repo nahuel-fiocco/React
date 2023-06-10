@@ -12,7 +12,7 @@ function ItemDetailContainer() {
   }
 
   return (
-    <div>
+    <div className='container-detail'>
       <div className="container-producto">
         <div className="left col-md-6">
           <img src={producto.imagen1} alt={producto.titulo} className='img' />
@@ -24,9 +24,9 @@ function ItemDetailContainer() {
         </div>
       </div>
       <div className="moreInfo">
-        <img src={producto.imagen2}/>
-        <img src={producto.imagen3}/>
-        <img src={producto.imagen4}/>
+        <img src={producto.imagen2} />
+        <img src={producto.imagen3} />
+        <img src={producto.imagen4} />
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ function Carrito() {
     //     ))}
     //   </ul>
     // </div>
-    <div>
+    <div className='container-carrito'>
       <h1>Carrito</h1>
       <h4>Tu carrito contiene...</h4>
       <img src="https://media.tenor.com/M-ibWYQzmiIAAAAC/cat-cute.gif" alt="Sitio en Construccion" className='imagen-carrito' />
