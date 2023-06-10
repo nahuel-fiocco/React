@@ -1,0 +1,10 @@
+.contenedor {
+    gap: 1vh;
+    height: 4vh;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
