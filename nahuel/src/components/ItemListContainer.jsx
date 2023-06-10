@@ -4,6 +4,7 @@ import './ItemListContainer.css'
 import ItemList from './ItemList.jsx'
 import { BounceLoader } from 'react-spinners'
 import { useParams } from 'react-router-dom'
+import { set } from 'react-hook-form'
 
 function ItemListContainer() {
 
@@ -13,7 +14,7 @@ function ItemListContainer() {
   const { categoryId } = useParams()
 
   const getList = () => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       setTimeout(() => {
         resolve(productos)
       }, 1000)
@@ -29,6 +30,7 @@ function ItemListContainer() {
         setProductList(filteredProducts)
       })
       .catch((error) => {
+        setError(error)
         console.log(error)
       })
       .finally(() => {
@@ -41,7 +43,7 @@ function ItemListContainer() {
     <div className='contenedor-home'>
       {loading && (
         <div className="spinner">
-          <BounceLoader color={'#123abc'} loading={true} size={50} />
+          <BounceLoader color={'#4891DC'} loading={true} size={50} speedMultiplier={2} />
           <p>Loading</p>
         </div>
       )}
