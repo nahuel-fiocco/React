@@ -4,7 +4,6 @@ import './ItemListContainer.css'
 import ItemList from './ItemList.jsx'
 import { BounceLoader } from 'react-spinners'
 import { useParams } from 'react-router-dom'
-import { set } from 'react-hook-form'
 
 function ItemListContainer() {
 
