@@ -24,6 +24,9 @@ function NavBar() {
         <NavLink to={'/category/Serie_A'} className="nav-link text-light" activeclassname='fw-bold'>
           Serie A
         </NavLink>
+        <NavLink to={'/category/Serie_Z'} className="nav-link text-light" activeclassname='fw-bold'>
+          Serie Z
+        </NavLink>
         <NavLink to={'/category/Accesorios'} className="nav-link text-light" activeclassname='fw-bold'>
           Accesorios
         </NavLink>
