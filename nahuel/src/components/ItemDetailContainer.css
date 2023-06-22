@@ -1,8 +1,29 @@
+.container-detail{
+    min-height: 101vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .container-producto{
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.right{
+    margin: auto;
+}
+
+.left{
+    margin: auto;
+}
+
+.moreInfo{
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-.container-detail{
-    min-height: 101vh;
+.moreInfo img{
+    width: 50%;
 }

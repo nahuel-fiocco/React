@@ -1,31 +1,31 @@
 import React, { useEffect, useState, useContext } from 'react';
-// import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import './ItemListContainer.css';
 import ItemList from './ItemList.jsx';
-// import AppContext from './Contexto';
 import db from './Firebase';
-import { getDoc, doc } from 'firebase/firestore';
+import { getDocs, collection, query, where } from 'firebase/firestore';
 
 function ItemListContainer() {
   const [item, setItem] = useState([]);
-  // const { categoryId } = useParams();
-  // const { setProductList } = useContext(AppContext);
+  const { categoryId } = useParams();
 
-  useEffect(() => {
-    const producto = doc(db, 'productos', '1');
-    getDoc(producto).then(resultado => {
-      if(resultado.exists()){
-        setItem({id: resultado.id, ...resultado.data()});
-        console.log("Se encontro el producto :)");
-      } else{
-        console.error("No existe el producto :(");
-      }
+ useEffect(() => {
+  const productosRef = collection(db, 'productos');
+  const q = categoryId ? query(productosRef, where('categoria', '==', categoryId)) : productosRef;
+
+  getDocs(q)
+    .then((snapshot) => {
+      const items = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+      setItem(items);
+    })
+    .catch((error) => {
+      console.log(error);
     });
-  }, []);
+}, [categoryId]);
 
   return (
     <div className="contenedor-home">
-      <ItemList />
+      <ItemList productos={item} />
     </div>
   );
 }
