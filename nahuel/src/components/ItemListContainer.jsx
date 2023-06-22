@@ -1,54 +1,31 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { BounceLoader } from 'react-spinners';
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 import './ItemListContainer.css';
 import ItemList from './ItemList.jsx';
-import AppContext from './Contexto';
-import productos from './Productos.json';
+// import AppContext from './Contexto';
+import db from './Firebase';
+import { getDoc, doc } from 'firebase/firestore';
 
 function ItemListContainer() {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const { categoryId } = useParams();
-  const { setProductList } = useContext(AppContext);
-
-  const getList = () => {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(productos);
-      }, 1000);
-    });
-  };
+  const [item, setItem] = useState([]);
+  // const { categoryId } = useParams();
+  // const { setProductList } = useContext(AppContext);
 
   useEffect(() => {
-    setLoading(true);
-    getList()
-      .then((result) => {
-        const filteredProducts = categoryId
-          ? result.filter((product) => product.categoria === categoryId)
-          : result;
-        setProductList(filteredProducts);
-      })
-      .catch((error) => {
-        setError(error);
-        console.log(error);
-      })
-      .finally(() => {
-        setLoading(false);
-        console.log('Finalizó la petición');
-      });
-  }, [categoryId, setProductList]);
+    const producto = doc(db, 'productos', '1');
+    getDoc(producto).then(resultado => {
+      if(resultado.exists()){
+        setItem({id: resultado.id, ...resultado.data()});
+        console.log("Se encontro el producto :)");
+      } else{
+        console.error("No existe el producto :(");
+      }
+    });
+  }, []);
 
   return (
     <div className="contenedor-home">
-      {loading && (
-        <div className="spinner">
-          <BounceLoader color={'#4891DC'} loading={true} size={50} speedMultiplier={2} />
-          <p>Loading</p>
-        </div>
-      )}
-      {error && <p>Hubo un error: {error.message}</p>}
-      {!loading && !error && <ItemList />}
+      <ItemList />
     </div>
   );
 }
