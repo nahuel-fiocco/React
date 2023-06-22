@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import Productos from './Productos.js';
+import Productos from './Productos.json';
 import './ItemDetailContainer.css';
 
 function ItemDetailContainer() {

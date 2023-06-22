@@ -1,0 +1,86 @@
+[
+  {
+    "idx": 1,
+    "titulo": "Samsung Galaxy A34 5G",
+    "descripcion": "Liberado - 128 GB + 6 GB",
+    "precio": 169999,
+    "imagen1": "https://images.samsung.com/is/image/samsung/p6pim/ar/sm-a346mzkbaro/gallery/ar-galaxy-a34-5g-sm-a346-sm-a346mzkbaro-535959382?$1300_1038_PNG$",
+    "imagen2": "https://images.samsung.com/is/image/samsung/p6pim/ar/feature/164486924/ar-feature--nbsp-535959422?$FB_TYPE_A_JPG$",
+    "imagen3": "https://images.samsung.com/is/image/samsung/p6pim/ar/feature/164486955/ar-feature-simple-and-sleek-535959485?$FB_TYPE_K_JPG$",
+    "imagen4": "https://images.samsung.com/is/image/samsung/p6pim/ar/feature/164486953/ar-feature-multi-cameras--more-perfection-535959478?$FB_TYPE_K_JPG$",
+    "categoria": "Serie_A",
+    "stock": 10
+  },
+  {
+    "idx": 2,
+    "titulo": "Samsung Galaxy A54 5G",
+    "descripcion": "Liberado - 256 GB + 8 GB",
+    "precio": 226999,
+    "imagen1": "https://images.samsung.com/is/image/samsung/p6pim/ar/sm-a546ezkearo/gallery/ar-galaxy-a54-5g-sm-a546-sm-a546ezkearo-535983751?$1300_1038_PNG$",
+    "imagen2": "https://images.samsung.com/is/image/samsung/p6pim/ar/feature/164489623/ar-feature--nbsp-535983807?$FB_TYPE_A_JPG$",
+    "imagen3": "https://images.samsung.com/is/image/samsung/p6pim/ar/feature/164489616/ar-feature-go-for-more-than-2-days-535983784?$FB_TYPE_A_JPG$",
+    "imagen4": "https://images.samsung.com/is/image/samsung/p6pim/ar/feature/164489614/ar-feature-built-for-the-rough---tough-535983782?$900*N_JPG$",
+    "categoria": "Serie_A",
+    "stock": 10
+  },
+  {
+    "idx": 3,
+    "titulo": "Samsung Galaxy S22 5G",
+    "descripcion": "Liberado - 128 GB + 8 GB",
+    "precio": 279999,
+    "imagen1": "https://specs.yugatech.com/wp-content/uploads/1970/01/S22-600x600.jpg",
+    "imagen2": "https://media.flixcar.com/f360cdn/Samsung-106200356-ar-feature-galaxy-s-531167694--FB_TYPE_A_JPG-.jpg",
+    "imagen3": "",
+    "imagen4": "",
+    "categoria": "Serie_S",
+    "stock": 10
+  },
+  {
+    "idx": 4,
+    "titulo": "Samsung Galaxy S23 5G",
+    "descripcion": "Liberado - 128GB + 6GB",
+    "precio": 409999,
+    "imagen1": "https://samsungar.vtexassets.com/arquivos/ids/186516-1200-auto?width=1200&height=auto&aspect=true",
+    "imagen2": "https://media.flixcar.com/f360cdn/Samsung-118573391-ar-feature-galaxy-s-535203860--FB_TYPE_A_JPG-.jpg",
+    "imagen3": "https://media.flixcar.com/f360cdn/Samsung-118573403-ar-feature-galaxy-s-535203864--FB_TYPE_A_JPG-.jpg",
+    "imagen4": "",
+    "categoria": "Serie_S",
+    "stock": 10
+  },
+  {
+    "idx": 5,
+    "titulo": "Samsung Galaxy Z Fold4",
+    "descripcion": "Liberado - 256GB + 12GB",
+    "precio": 559999,
+    "imagen1": "https://samsungar.vtexassets.com/arquivos/ids/184374-1200-auto?width=1200&height=auto&aspect=true",
+    "imagen2": "https://s.yimg.com/uu/api/res/1.2/2LP0gfbKcqcC28q3o0CL_w--~B/aD0xMjAwO3c9MjAwMDthcHBpZD15dGFjaHlvbg--/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2022-08/65ee5380-2271-11ed-bcff-84ad92ba8407.cf.jpg",
+    "imagen3": "https://www.latercera.com/resizer/wYTUb8ODWS9iqMtBjRi8X-TtgMk=/arc-anglerfish-arc2-prod-copesa/public/HCR2D5Q3PJBDLEGIXXXFBNKREI.jpg",
+    "imagen4": "",
+    "categoria": "Serie_Z",
+    "stock": 10
+  },
+  {
+    "idx": 6,
+    "titulo": "Samsung Galaxy Watch 5",
+    "descripcion": "Reloj Inteligente - 44mm de diametro",
+    "precio": 134999,
+    "imagen1": "https://samsungar.vtexassets.com/arquivos/ids/184157-1200-auto?width=1200&height=auto&aspect=true",
+    "imagen2": "https://media.flixcar.com/f360cdn/Samsung-109346878-ar-feature-counts-your-sheep-for-you-533193385--FB_TYPE_A_JPG-.jpg",
+    "imagen3": "https://media.flixcar.com/f360cdn/Samsung-109346902-ar-feature-watch-your-heart-533193363--FB_TYPE_A_JPG-.jpg",
+    "imagen4": "https://media.flixcar.com/f360cdn/Samsung-109346982-ar-feature--nbsp-533193367--FB_TYPE_B_JPG-.jpg",
+    "categoria": "Accesorios",
+    "stock": 10
+  },
+  {
+    "idx": 7,
+    "titulo": "Samsung Galaxy Buds 2",
+    "descripcion": "Auriculares True Wireless Con Cancelacion De Sonido Activa",
+    "precio": 52999,
+    "imagen1": "https://samsungar.vtexassets.com/arquivos/ids/173090-1200-auto?width=1200&height=auto&aspect=true",
+    "imagen2": "https://media.flixcar.com/f360cdn/Samsung-92907781-ar-feature-immerse-yourself-into-your-own-world-481699659--FB_TYPE_A_JPG-.jpg",
+    "imagen3": "https://media.flixcar.com/f360cdn/Samsung-92907841-ar-feature---481699647--FB_TYPE_A_JPG-.jpg",
+    "imagen4": "https://media.flixcar.com/f360cdn/Samsung-92907871-ar-feature-the-lightest-earbuds-we-ve-ever-made-481699631--FB_TYPE_A_JPG-.jpg",
+    "categoria": "Accesorios",
+    "stock": 10
+  }
+]
