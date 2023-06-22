@@ -4,4 +4,22 @@
 
 .container-carrito{
     min-height: 101vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+    margin: auto;
+}
+
+li{
+    display: flex;
+    flex-direction: row;
+    gap: 20vh;
+    align-items: center;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
 }

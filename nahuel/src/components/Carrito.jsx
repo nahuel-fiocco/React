@@ -1,21 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Carrito.css';
+import { AppContext } from './Contexto';
 
 function Carrito() {
+  const { carritoItems } = useContext(AppContext);
+
   return (
-    // <div className="carrito-popup">
-    //   <h3>Carrito</h3>
-    //   <ul>
-    //     {carritoItems.map((item, index) => (
-    //       <li key={index}>{item}</li>
-    //     ))}
-    //   </ul>
-    // </div>
-    <div className='container-carrito'>
-      <h1>Carrito</h1>
-      <h4>Tu carrito contiene...</h4>
-      <img src="https://media.tenor.com/M-ibWYQzmiIAAAAC/cat-cute.gif" alt="Sitio en Construccion" className='imagen-carrito' />
-      <h5>Sitio en construccion, estamos trabajando para usted.</h5>
+    <div className="container-carrito">
+      <h2>El carrito contiene:</h2>
+      <div className='carrito-content'>
+        <ul>
+          {carritoItems.map((producto) => (
+            <li key={producto.id}>
+              <img src={producto.imagen1} alt={producto.titulo} width={100} />
+              <h6>{producto.titulo}</h6>
+              <p>${producto.precio}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="carrito-total">
+        <h3>Total: ${carritoItems.reduce((acc, item) => acc + item.precio, 0)}</h3>
+      </div>
     </div>
   );
 }

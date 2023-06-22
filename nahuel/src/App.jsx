@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { createRoot } from 'react-dom/client';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { createRoot } from 'react-dom/client';
 import './main.css';
 import NavBar from './components/NavBar.jsx';
 import Footer from './components/Footer.jsx';
@@ -9,18 +9,22 @@ import Soporte from './components/Soporte.jsx';
 import NotFound from './components/NotFound.jsx';
 import Carrito from './components/Carrito';
 import ItemDetailContainer from './components/ItemDetailContainer';
-import AppContext from './components/Contexto';
+import { AppProvider } from './components/Contexto';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
 const App = () => {
-  const [productList, setProductList] = useState([]);
+  const [carritoItems, setCarritoItems] = useState([]);
+
+  const agregarAlCarrito = (producto) => {
+    setCarritoItems((prevCarritoItems) => [...prevCarritoItems, producto]);
+  };
 
   return (
     <div>
       <BrowserRouter>
-        <AppContext.Provider value={{ productList, setProductList }}>
+        <AppProvider value={{ carritoItems, agregarAlCarrito }}>
           <NavBar />
           <Routes>
             <Route path="/" element={<ItemListContainer />} />
@@ -31,7 +35,7 @@ const App = () => {
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
-        </AppContext.Provider>
+        </AppProvider>
       </BrowserRouter>
     </div>
   );
