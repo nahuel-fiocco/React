@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import productos from './Productos.js'
-import './ItemListContainer.css'
-import ItemList from './ItemList.jsx'
-import { BounceLoader } from 'react-spinners'
-import { useParams } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import { BounceLoader } from 'react-spinners';
+import { useParams } from 'react-router-dom';
+import productos from './Productos.js';
+import './ItemListContainer.css';
+import ItemList from './ItemList.jsx';
+
 
 function ItemListContainer() {
 

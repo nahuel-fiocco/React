@@ -1,12 +1,12 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './main.css';
 import NavBar from './components/NavBar.jsx';
 import Footer from './components/Footer.jsx';
 import ItemListContainer from './components/ItemListContainer.jsx';
 import Soporte from './components/Soporte.jsx';
 import NotFound from './components/NotFound.jsx';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Carrito from './components/Carrito';
 import ItemDetailContainer from './components/ItemDetailContainer';
 
