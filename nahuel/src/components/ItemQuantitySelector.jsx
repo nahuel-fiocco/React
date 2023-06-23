@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './ItemQuantitySelector.css';
 
 function ItemQuantitySelector({ initialQuantity, onQuantityChange }) {
   const [quantity, setQuantity] = useState(initialQuantity);
@@ -19,9 +20,9 @@ function ItemQuantitySelector({ initialQuantity, onQuantityChange }) {
 
   return (
     <div className="item-quantity-selector">
-      <button onClick={handleIncrease}>+</button>
+      <button type='button' className='btn btn-primary' onClick={handleIncrease}>+</button>
       <span>{quantity}</span>
-      <button onClick={handleDecrease}>-</button>
+      <button type='button' className='btn btn-primary' onClick={handleDecrease}>-</button>
     </div>
   );
 }

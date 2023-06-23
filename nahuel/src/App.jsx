@@ -10,6 +10,7 @@ import NotFound from './components/NotFound.jsx';
 import Carrito from './components/Carrito';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import { AppProvider } from './components/Contexto';
+import Checkout from './components/Checkout';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
@@ -32,6 +33,7 @@ const App = () => {
             <Route path="/producto/:productId" element={<ItemDetailContainer />} />
             <Route path="/Soporte" element={<Soporte />} />
             <Route path="/Carrito" element={<Carrito />} />
+            <Route path='/Checkout' element={<Checkout/>}/>
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />

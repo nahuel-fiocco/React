@@ -1,5 +1,5 @@
 .container-detail{
-    min-height: 101vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }

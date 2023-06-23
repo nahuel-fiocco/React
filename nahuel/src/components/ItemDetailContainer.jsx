@@ -82,7 +82,7 @@ function ItemDetailContainer() {
                 initialQuantity={selectedQuantity}
                 onQuantityChange={handleQuantityChange}
               />
-              <button onClick={handleQuitarCarrito}>Quitar del carrito</button>
+              <button type='button' className='btn btn-danger' onClick={handleQuitarCarrito}>Quitar del carrito</button>
             </div>
           ) : (
             <div>
@@ -91,7 +91,7 @@ function ItemDetailContainer() {
                 initialQuantity={selectedQuantity}
                 onQuantityChange={handleQuantityChange}
               />
-              <button onClick={handleAgregarCarrito}>Agregar al carrito</button>
+              <button type='button' className='btn btn-success' onClick={handleAgregarCarrito}>Agregar al carrito</button>
             </div>
           )}
         </div>
