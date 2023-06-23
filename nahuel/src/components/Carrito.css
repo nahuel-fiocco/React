@@ -33,3 +33,7 @@ ul{
     gap: 1vh;
     width: 50vh;
 }
+
+#vaciarCarrito{
+    width: 100%;
+}
