@@ -1,4 +1,4 @@
-.contenedor-home{
+.contenedor-home {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -7,18 +7,10 @@
     min-height: 100vh;
 }
 
-.contenedor-imagen-destacada{
+.contenedor-imagen-destacada {
     width: 50%;
 }
 
-.imagen-destacada{
+.imagen-destacada {
     width: 100%;
-}
-
-.spinner{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2vh;
 }

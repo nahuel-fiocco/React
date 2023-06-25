@@ -13,7 +13,15 @@ const AppProvider = ({ children }) => {
   }, []);
 
   const agregarAlCarrito = (producto) => {
-    setCarritoItems([...carritoItems, producto]);
+    const existente = carritoItems.find((item) => item.id === producto.id);
+    if (existente) {
+      const nuevosItems = carritoItems.map((item) =>
+        item.id === producto.id ? { ...item, cantidad: item.cantidad + 1 } : item
+      );
+      setCarritoItems(nuevosItems);
+    } else {
+      setCarritoItems((prevCarritoItems) => [...prevCarritoItems, { ...producto, cantidad: 1 }]);
+    }
   };
 
   const eliminarDelCarrito = (productoId) => {
@@ -26,12 +34,24 @@ const AppProvider = ({ children }) => {
     localStorage.removeItem('carritoItems');
   };
 
+  const productosConCantidad = carritoItems.reduce((acumulador, producto) => {
+    const existente = acumulador.find((item) => item.id === producto.id);
+    if (existente) {
+      existente.cantidad += producto.cantidad;
+    } else {
+      acumulador.push({ ...producto });
+    }
+    return acumulador;
+  }, []);
+
   useEffect(() => {
     localStorage.setItem('carritoItems', JSON.stringify(carritoItems));
   }, [carritoItems]);
 
   return (
-    <AppContext.Provider value={{ carritoItems, agregarAlCarrito, eliminarDelCarrito, vaciarCarrito }}>
+    <AppContext.Provider
+      value={{ carritoItems, agregarAlCarrito, eliminarDelCarrito, vaciarCarrito, productosConCantidad }}
+    >
       {children}
     </AppContext.Provider>
   );

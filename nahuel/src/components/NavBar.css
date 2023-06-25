@@ -1,9 +1,9 @@
-.navbar{
+.navbar {
     display: flex;
     gap: 5vh;
 }
 
-.container-fluid{
+.container-fluid {
     backdrop-filter: blur(5px);
     background-color: rgba(0, 0, 0, 0.8);
 }

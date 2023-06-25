@@ -4,25 +4,32 @@ import './ItemQuantitySelector.css';
 function ItemQuantitySelector({ initialQuantity, onQuantityChange }) {
   const [quantity, setQuantity] = useState(initialQuantity);
 
+  const handleQuantityChange = (newQuantity) => {
+    setQuantity(newQuantity);
+    onQuantityChange(newQuantity);
+  };
+
   const handleDecrease = () => {
-    if (quantity > 0 && quantity != 1) {
+    if (quantity > 0 && quantity !== 1) {
       const newQuantity = quantity - 1;
-      setQuantity(newQuantity);
-      onQuantityChange(newQuantity);
+      handleQuantityChange(newQuantity);
     }
   };
 
   const handleIncrease = () => {
     const newQuantity = quantity + 1;
-    setQuantity(newQuantity);
-    onQuantityChange(newQuantity);
+    handleQuantityChange(newQuantity);
   };
 
   return (
     <div className="item-quantity-selector">
-      <button type='button' className='btn btn-primary' onClick={handleIncrease}>+</button>
+      <button type="button" className="btn btn-primary" onClick={handleIncrease}>
+        +
+      </button>
       <span>{quantity}</span>
-      <button type='button' className='btn btn-primary' onClick={handleDecrease}>-</button>
+      <button type="button" className="btn btn-primary" onClick={handleDecrease}>
+        -
+      </button>
     </div>
   );
 }

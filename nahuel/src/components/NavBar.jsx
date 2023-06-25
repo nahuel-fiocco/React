@@ -1,7 +1,12 @@
 import './NavBar.css';
 import { NavLink } from 'react-router-dom';
+import Badge from 'react-bootstrap/Badge';
+import { useContext } from 'react';
+import { AppContext } from './Contexto';
 
 function NavBar() {
+  const { carritoItems } = useContext(AppContext);
+
   return (
     <div className='container-fluid d-flex justify-content-center sticky-top'>
       <nav className="navbar">
@@ -20,11 +25,13 @@ function NavBar() {
         <NavLink to={'/category/Accesorios'} className="nav-link text-light" activeclassname='fw-bold'>
           Accesorios
         </NavLink>
-        <NavLink to={'/Soporte'} className="nav-link text-light" activeclassname='fw-bold'>
-          Soporte
-        </NavLink>
         <NavLink to={'/Carrito'} className="nav-link text-light" activeclassname='fw-bold'>
           <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Antu_amarok_cart_add.svg" alt="Cart Icon White" width={30} />
+          {carritoItems.length > 0 && (
+            <Badge bg="danger" className="cart-badge">
+              {carritoItems.length}
+            </Badge>
+          )}
         </NavLink>
       </nav>
     </div>

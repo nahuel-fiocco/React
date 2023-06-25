@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Item from './Item';
 
-function ItemList({ productos}) {
+function ItemList({ productos }) {
 
   return (
     <div className="card-container">

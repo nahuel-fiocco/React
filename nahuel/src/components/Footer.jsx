@@ -1,6 +1,6 @@
-import React from 'react'
-import './Footer.css'
-import github from '../assets/github.svg'
+import React from 'react';
+import './Footer.css';
+import github from '../assets/github.svg';
 
 
 function Footer() {
@@ -13,7 +13,7 @@ function Footer() {
         </div>
       </a>
     </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
